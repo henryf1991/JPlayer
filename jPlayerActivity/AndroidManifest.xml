@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/player_logo"
+        android:label="@string/app_name"
+        android:theme="@style/jPlayerTheme" >
+        <activity
+            android:name="com.example.jplayer.jPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+            <intent-filter android:priority="-1" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="content" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.example.jplayer.services.MusicService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.example.jplayer.action.TOGGLE_PLAYBACK" />
+                <action android:name="com.example.jplayer.action.PLAY" />
+                <action android:name="com.example.jplayer.action.PAUSE" />
+                <action android:name="com.example.jplayer.action.PLAYNEXT" />
+                <action android:name="com.example.jplayer.action.PLAYPREVIUOS" />
+                <action android:name="com.example.jplayer.STOP" />
+                <action android:name="com.example.jplayer.action.URL" />
+                <action android:name="com.example.jplayer.action.PLAYMODE" />
+                <action android:name="com.example.jplayer.action.SENDCHILD" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.jplayer.MaxPlayerActivity"
+            android:label="@string/title_activity_max_player"
+            android:theme="@style/Theme.Sherlock.Light.NoActionBar" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JPlayer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_update">Update</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="player_menu_title">
+        <item>All</item>
+        <item>Artists</item>
+        <item>Albums</item>
+        <item>Genres</item>
+        <item>Folder</item>
+        <item>Playlist</item>
+    </string-array>
+    <string-array name="dialog_items">
+        <item>Play</item>
+        <item>Share</item>
+        <item>Add to Playlist</item>
+        <item>Delete</item>
+    </string-array>
+
+    <integer-array name="player_menu_key">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+    
+    
+
+    <string name="desc_list_item_icon">list image</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="album_cover">Album Cover</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="title_activity_max_player">MaxPlayerActivity</string>
+
+</resources>

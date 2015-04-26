@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/miniPlayer"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:background="@color/miniplayer_background"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/miniPlayerCover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/album_cover"
+        android:scaleType="fitXY"
+        android:src="@drawable/fallback_cover" />
+
+    <TextView
+        android:id="@+id/miniPlayerSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/miniPlayerCover"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/miniPlayerSong"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/miniPlayerCover"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/miniPlayerPrevious"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageView
+            android:id="@+id/miniPlayerPlayPause"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_pause" />
+
+        <ImageView
+            android:id="@+id/miniPlayerNext"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_next" />
+    </LinearLayout>
+
+</RelativeLayout>

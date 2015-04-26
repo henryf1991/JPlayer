@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:weightSum="2" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/maxPlayerCover"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/maxPlayerPlayingMode"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_menu_crop" />
+
+        <ImageView
+            android:id="@+id/maxPlayerShuffle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_menu_crop" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="#FF123456"
+        android:padding="10dp" >
+        
+        <RelativeLayout 
+            android:id="@+id/maxPlayerlandscapeHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/maxPlayerBackButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_lock_idle_alarm" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/maxPlayerBackButton"
+            android:background="#FFFFFFFF" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@+id/maxPlayerVolumneControl"
+            android:background="#FFFFFFFF" />
+
+        <ImageView
+            android:id="@+id/maxPlayerVolumneControl"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_lock_idle_alarm" />
+        
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/songTitleParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/maxPlayerlandscapeHeader"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/maxPlayerSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/maxPlayerSongArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maxPlayerSong"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#FF123456"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/maxPlayerPrevious"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_media_previous" />
+
+            <ImageView
+                android:id="@+id/maxPlayerPlayPause"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@android:drawable/ic_media_pause" />
+
+            <ImageView
+                android:id="@+id/maxPlayerNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_media_next" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/maxPlayerCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/maxPlayerSeekbar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="2dp"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/maxPlayerTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/maxPlayerSeekbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:textColor="#FFFFFFFF" />
+
+        <SeekBar
+            android:id="@+id/maxPlayerSeekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="5dp"
+            android:progress="0" />
+    </RelativeLayout>
+
+</LinearLayout>
